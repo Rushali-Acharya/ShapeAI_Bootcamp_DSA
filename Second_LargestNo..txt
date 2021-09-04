@@ -1,0 +1,28 @@
+// Q. 7 print second largest number //
+#include<stdio.h>
+#include <iostream>
+using namespace std;
+int main() {
+    int n,i;
+    int arr[50];
+int large=0, secondLargest=0;
+cout<<"Enter the number of elements in array: ";
+cin>>n;
+for(i=0; i<n; i++){
+    cout<<"Enter the array element"<<i+1<<": ";
+cin>>arr[i];
+
+if(large<arr[i]){
+secondLargest=large;
+large=arr[i];
+}
+else if(secondLargest<arr[i]){
+secondLargest=arr[i];
+}
+
+}
+cout<<"\n";
+cout<<""<<large<<" is a largest number\n";
+cout<<secondLargest<< " is a second largest nunber";
+    return 0;
+}
